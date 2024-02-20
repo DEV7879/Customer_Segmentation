@@ -27,7 +27,7 @@ While working in a company that serves goods to thousands of customers in severa
 
 This project focuses on doing RFM analysis on company sales and creating a **data visualization dashboard** showcasing **customer segmentation** that I can share with colleagues in the countries.
 
-![Customer Segmentation Small](https://github.com/daniel-isidro/customer_segmentation/blob/main/media/customer_segmentation_small.png?raw=true)
+![Customer Segmentation Small](media/customer_segmentation_small.png)
 
 # Methodology
 
@@ -50,13 +50,13 @@ We'll use the [Google Colaboratory](https://colab.research.google.com/) Jupyter 
 
 For replicating the project, please execute the following steps in order:
 
-1. **[Jupyter notebook](https://github.com/daniel-isidro/customer_segmentation/blob/main/code/customer_segmentation_asia.ipynb)**. Running this notebook the data will be explored, prepared, and the RFM segmentation will be performed. The output will be a [CSV file](https://github.com/daniel-isidro/customer_segmentation/blob/main/output/rfm_asia.csv).
+1. **[Jupyter notebook](code/customer_segmentation_asia.ipynb)**. Running this notebook the data will be explored, prepared, and the RFM segmentation will be performed. The output will be a [CSV file](data/sales_asia.csv).
 
-2. **[Power BI file](https://github.com/daniel-isidro/customer_segmentation/blob/main/output/customer_segmentation.pbix)**. This is a file that processes the CSV file obtained in the previous step and presents it as a dashboard so it can be leveraged for business actions in the countries.
+2. **[Power BI file](output/customer_segmentation.pbix)**. This is a file that processes the CSV file obtained in the previous step and presents it as a dashboard so it can be leveraged for business actions in the countries.
 
 # Data Acquisition
 
-Data has been obtained from **real sales orders** in 18 countries in a period of around 2 years. Some features (country names, customer id and revenue), have been altered in order to preserve privacy. Number of orders, units and dates have not been modified. It is acquired as a [CSV file](https://raw.githubusercontent.com/daniel-isidro/customer_segmentation/main/data/sales_asia.csv).
+Data has been obtained from **real sales orders** in 18 countries in a period of around 2 years. Some features (country names, customer id and revenue), have been altered in order to preserve privacy. Number of orders, units and dates have not been modified. It is acquired as a [CSV file](data/sales_asia.csv).
 
 # Data Preparation
 
@@ -374,13 +374,13 @@ Units chart:
 
 `df2c['units'].groupby('date').agg(sum).plot(figsize=(20,5));`
 
-<img src="https://raw.githubusercontent.com/daniel-isidro/customer_segmentation/main/media/units.png" width="800">
+<img src="media/units.png" width="800">
 
 Revenue chart:
 
 `df2c['monetary'].groupby('date').agg(sum).plot(figsize=(20,5));`
 
-<img src="https://raw.githubusercontent.com/daniel-isidro/customer_segmentation/main/media/monetary.png" width="800">
+<img src="media/monetary.png" width="800">
 
 # Modeling
 
@@ -1125,7 +1125,7 @@ We can display some customer segments in the dataframe.
 
 Let's do a scatter plot to explore the distribution of customers, with 'recency' on the x-axis and 'frequency' in the y-axis. Using the 'monetary' values as size of the points, we see that the majority of customers who **spend the most** also purchase **more recently** and **more frequently**.
 
-![Scatterplot](https://raw.githubusercontent.com/daniel-isidro/customer_segmentation/main/media/scatter.png)
+![Scatterplot](media/scatter.png)
 
 Finally we export the dataframe to a CSV file for later processing it in Power BI.
 
@@ -1133,11 +1133,11 @@ Finally we export the dataframe to a CSV file for later processing it in Power B
 
 # Front-end
 
-The front-end of this project consists in a **Power BI dashboard** that processes the CSV resulting from executing the previous Python code, and visualizes the results in a pleasing dashboard. That dashboard then can be shared with multiple colleagues in the different countries of the company. You can access that file [here](https://github.com/daniel-isidro/customer_segmentation/blob/main/output/customer_segmentation.pbix) for exploring it.
+The front-end of this project consists in a **Power BI dashboard** that processes the CSV resulting from executing the previous Python code, and visualizes the results in a pleasing dashboard. That dashboard then can be shared with multiple colleagues in the different countries of the company. You can access that file [here](output/customer_segmentation.pbix) for exploring it.
 
-![Customer Segmentation](https://github.com/daniel-isidro/customer_segmentation/blob/main/media/customer_segmentation.png?raw=true)
+![Customer Segmentation](media/customer_segmentation.png)
 
-![RFM Analysis](https://github.com/daniel-isidro/customer_segmentation/blob/main/media/rfm_analysis.png?raw=true)
+![RFM Analysis](media/rfm_analysis.png)
 
 We observe that a lot of our customers (32 %) are **lost** or **hibernating** (they have a few orders from long ago). However, 28 % of our customers are either **champions** or **loyal customers**, meaning they spend the most and frequently. A segment to take care is **can't lose**, second segment with highest revenue, comprised of customers who used to spend a lot but have not returned in a while.
 
@@ -1145,13 +1145,13 @@ We observe that a lot of our customers (32 %) are **lost** or **hibernating** (t
 
 We can share the dashboard with our country sales managers so they can be **guided to the customer id's on the different segments** and **take specific actions on them**. Let's view an example: my Chinese colleague needs to be guided on what customers to contact next to **improve customer retention** or to **increase sales**. They would just need to open this dashboard, click on country (top right) and then on customer segment **need attention** or **at risk**, to have a specific list of customers, ordered by revenue spent in the last 365 days. (An unedited dataset would also include customer names and contact details, which in this case have been omitted for privacy reasons).
 
-![Country - Need Attention](https://github.com/daniel-isidro/customer_segmentation/blob/main/media/cs_cn_need_attention.png?raw=true)
+![Country - Need Attention](media/cs_cn_need_attention.png)
 
-![Country - At Risk](https://github.com/daniel-isidro/customer_segmentation/blob/main/media/cs_cn_at_risk.png?raw=true)
+![Country - At Risk](media/cs_cn_at_risk.png)
 
 A **reference guide** to the 11 segments and suggested actions per segment is included in the last tab of the dashboard.
 
-![Reference](https://github.com/daniel-isidro/customer_segmentation/blob/main/media/reference.png?raw=true)
+![Reference](media/reference.png)
 
 # Conclusions
 
@@ -1163,7 +1163,3 @@ A **reference guide** to the 11 segments and suggested actions per segment is in
 
 [**Google Cloud** - Predicting Customer Lifetime Value with AI Platform](https://cloud.google.com/architecture/clv-prediction-with-offline-training-intro#overview)
 
-# About Me
-
-[Daniel Isidro](https://www.linkedin.com/in/daniel-isidro/)
-"# customer_segmentation" 
