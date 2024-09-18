@@ -1,5 +1,4 @@
-# Customer Segmentation with RFM Analysis, using Python and Power BI
-
+# Customer Segmentation
 ![Header](media/header.jpg)
 
 # Table of Contents
