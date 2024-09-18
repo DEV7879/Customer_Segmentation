@@ -7,13 +7,6 @@
 [Introduction](#introduction) <br>
 [Methodology](#methodology) <br>
 [Requirements](#requirements) <br>
-[Execution Guide](#execution-Guide) <br>
-[Data Acquisition](#data-acquisition) <br>
-[Data Preparation](#data-preparation) <br>
-[Raw Data Description](#raw-data-description) <br>
-[Data Exploration](#data-exploration) <br>
-[Modeling](#modeling) <br>
-[Summary](#summary) <br>
 [Front-end](#front-end) <br>
 [Conclusions](#conclusions) <br>
 [References](#references) <br>
